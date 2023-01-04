@@ -5,7 +5,7 @@ import time
 import send_message
 
 def keep_token(token):
-    url = "https://yuyue.njucm.edu.cn/gym/?state=1#/pages/index"
+    url = "https://yuyages/index" #这里是要request的网站url
     my_params = {"token": token}  # 字典格式，推荐使用，它会自动帮你按照k-v拼接url
     res = requests.get(url=url, params=my_params)
     if res.status_code == 200:
@@ -17,7 +17,7 @@ def keep_token(token):
 
 
 def oppoint(token,ptId):
-    url = "http://yuyue.njucm.edu.cn/ccms-gym/gym/queue/appointMulti"
+    url = "http://yuyuulti" #这里是要request的网站url
     my_params = {"token": token, "dateId": 2, "ptId": ptId,
                  "areaId": 3}  # 字典格式，推荐使用，它会自动帮你按照k-v拼接url
     res = requests.get(url=url, params=my_params)
